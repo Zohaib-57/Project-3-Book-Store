@@ -4,3 +4,112 @@
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
 }
+/* store logo */
+figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+}
+figure img{
+    width: 30%;
+    height: auto;
+}
+
+/* working on Navbar */
+ nav{
+     display: flex;
+     justify-content: space-evenly;
+     margin: 5px;
+     padding: 15px;
+     background-color: azure;
+ }
+ nav a{
+    text-decoration: none;
+    color: rgb(123, 123, 247);
+ }
+  /* nav a:hover{
+    text-decoration: underline;
+    background-color: aqua;
+    padding: 3px;
+    border-radius: 10px;
+  } */
+ #home{
+    display: flex;
+    justify-content: space-evenly;
+ }
+ #home div{
+    padding-top: 140px;
+ }
+ #home h3 {
+    font-size: 40px;
+    font-weight: 800;
+ }
+ #home input{
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: 20px;
+ }
+ #home img{
+    width: 25%;
+    height: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+ }
+ .promo{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+ }
+ .promo h2{
+    font-size: 40px;
+    font-weight: 500;
+ }
+ .promo p ,h2{
+padding: 20px;
+ }
+ 
+/* making responsive for mobile phone */
+ @media only screen and (max-width: 420px) {
+figure{
+margin-top: 15px;
+}
+figure img{
+    width: 100px;
+}
+#home{
+margin-right: 10px;
+}
+#home div{
+padding: 70;
+padding-left: 40px;
+}
+#home img{
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#home h3{
+    font-size: 10px;
+}
+#home input{
+    width: 100px;
+    height: 20px;
+    margin-top: 7px;
+}
+.promo {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+.promo h2{
+    font-size: medium;
+}
+.promo p{
+    font-size: smaller;
+    padding-top: 10px;
+}
+ }
+
+
