@@ -1,22 +1,27 @@
+/* General styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-/* store logo */
+
+/* Store logo */
 figure {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -30px;
 }
+
 figure img {
-    width: 30%;
+    margin-top: 37px;
+    width: 20%;
     height: auto;
+    border-radius: 50%;
 }
 
-/* working on Navbar */
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -24,22 +29,31 @@ nav {
     padding: 15px;
     background-color: #9f9b9b;
 }
+
 nav a {
     text-decoration: none;
     color: rgb(8, 8, 8);
 }
 
+/* Home section */
 #home {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
 }
+
 #home div {
-    padding-top: 140px;
+    padding-top: 20px;
+    text-align: center;
 }
+
 #home h3 {
     font-size: 40px;
     font-weight: 800;
 }
+
 #home input {
     width: 300px;
     padding: 10px;
@@ -47,64 +61,76 @@ nav a {
     border: 2px solid black;
     margin-top: 20px;
 }
+
 #home img {
     width: 25%;
     height: auto;
     margin-top: 20px;
     margin-right: 20px;
 }
+
+/* Promo section */
 .promo {
     text-align: center;
-    padding-bottom: 20px;
-    padding-top: 30px;
+    padding: 30px 20px;
 }
+
 .promo h2 {
     font-size: 40px;
     font-weight: 500;
 }
+
 .promo p, h2 {
     padding: 20px;
 }
 
+/* Best seller section */
 #best-seller {
     padding-top: 20px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
+
 #best-seller h3 {
     text-align: center;
     width: 100%;
     font-size: 30px;
 }
-.book-cards {
+
+.book-section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     width: 70%;
     margin-bottom: 50px;
 }
+
 .books {
-    flex: 0 1 calc(33.333% - 20px);
+    flex: 0 1 calc(33.333% - 40px);
     margin: 10px;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(182, 13, 13, 0.1);
     border-radius: 5px;
     height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    border: 1px solid blue;
 }
+
 .books img {
     width: 50%;
     height: auto;
     border-bottom: 1px solid #ccc;
     padding-bottom: 10px;
 }
+
 .books h4 {
     margin-top: 10px;
 }
+
 .books button {
     width: 100%;
     margin-top: 10px;
@@ -115,58 +141,222 @@ nav a {
     cursor: pointer;
     border-radius: 5px;
 }
+
 .books button:hover {
     background-color: #0056b3;
 }
 
-/* making responsive for mobile phone */
-@media only screen and (max-width: 420px) {
-    figure {
-        margin-top: 15px;
+/* Social Media Section */
+.social-media-section {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #d1cfcf;
+}
+
+.social-media-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #535353a7;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-content .store-logo {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-content .store-logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+
+.footer-content .address {
+    flex: 2;
+    text-align: center;
+}
+
+.footer-content .address h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-content .address p {
+    margin-bottom: 5px;
+}
+
+.footer-content .review-box {
+    flex: 2;
+    text-align: center;
+}
+
+.footer-content .review-box h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-content .review-box form input,
+.footer-content .review-box form textarea,
+.footer-content .review-box form button {
+    margin-bottom: 10px;
+    width: 80%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.footer-content .review-box form input {
+    width: 80%;
+}
+
+.footer-content .review-box form textarea {
+    height: 100px;
+}
+
+.footer-content .review-box form button {
+    width: 80%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-content .review-box form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
     }
-    figure img {
-        width: 100px;
+
+    nav a {
+        padding: 10px;
     }
+
     #home {
-        margin-right: 10px;
         flex-direction: column;
         align-items: center;
     }
+
     #home div {
-        padding: 70px;
-        padding-left: 40px;
+        padding: 20px;
     }
+
     #home img {
-        width: 100px;
-        margin-left: 10px;
-        margin-top: 10px;
+        width: 50%;
+        margin: 20px 0;
     }
-    #home h3 {
-        font-size: 10px;
-    }
-    #home input {
-        width: 100px;
-        height: 20px;
-        margin-top: 7px;
-    }
+
     .promo {
-        padding-top: 30px;
-        padding-bottom: 10px;
+        padding: 20px 10px;
     }
+
     .promo h2 {
-        font-size: medium;
+        font-size: 30px;
     }
+
     .promo p {
-        font-size: smaller;
-        padding-top: 10px;
+        font-size: 16px;
     }
-    .book-cards {
+
+    .book-section {
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }
+
     .books {
-        flex: 0 1 100%;
+        flex: 0 1 80%;
         margin: 10px 0;
-        height: auto; /* Adjust height for mobile view */
+        height: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content .company-logo,
+    .footer-content .address,
+    .footer-content .review-box {
+        flex: 1 1 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-content .review-box form input,
+    .footer-content .review-box form textarea,
+    .footer-content .review-box form button {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #home h3 {
+        font-size: 24px;
+    }
+
+    #home input {
+        width: 80%;
+    }
+
+    .promo h2 {
+        font-size: 24px;
+    }
+
+    .promo p {
+        font-size: 14px;
+    }
+
+    .books img {
+        width: 80%;
+    }
+
+    .footer-content .company-logo img {
+        width: 80px;
+    }
+
+    .footer-content .address h4,
+    .footer-content .review-box h4 {
+        font-size: 16px;
+    }
+
+    .footer-content .address p,
+    .footer-content .review-box form input,
+    .footer-content .review-box form textarea,
+    .footer-content .review-box form button {
+        font-size: 14px;
     }
 }
