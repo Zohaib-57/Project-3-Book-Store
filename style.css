@@ -28,11 +28,18 @@ nav {
     margin: 5px;
     padding: 15px;
     background-color: #9f9b9b;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
 }
 
 nav a {
     text-decoration: none;
     color: rgb(8, 8, 8);
+}
+nav a:hover{
+    text-decoration: underline;
 }
 
 /* Home section */
