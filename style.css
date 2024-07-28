@@ -22,6 +22,16 @@ figure img {
 }
 
 /* Navbar */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-evenly;
@@ -31,7 +41,8 @@ nav {
     position: sticky;
     top: 0;
     width: 100%;
-    z-index: 1000; 
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
 }
 
 nav a {
@@ -365,5 +376,37 @@ footer {
     .footer-content .review-box form textarea,
     .footer-content .review-box form button {
         font-size: 14px;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-100%);
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .show-nav nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transform: translateY(0);
+        animation: slideIn 0.3s ease-in-out;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
     }
 }

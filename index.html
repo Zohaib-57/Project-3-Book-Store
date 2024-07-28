@@ -12,6 +12,9 @@
         <img src="./images/store-logo.png" alt="store logo">
     </figure>
     <!-- navbar -->
+    <div class="hamburger-menu" onclick="toggleMenu()">
+        &#9776;
+    </div>
     <nav>
         <a href="">Home</a>
         <a href="">Best Sellers</a>
@@ -125,5 +128,12 @@
              </div>
          </div>
      </footer>
+
+     <!--added the javacsript to make the navbar reposnsive -->
+     <script>
+        function toggleMenu() {
+            document.body.classList.toggle('show-nav');
+        }
+    </script>
 </body>
 </html>
